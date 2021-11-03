@@ -16,19 +16,42 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <HorizontalScrollView
+    <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,9 +64,9 @@
                 android:layout_height="300dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
-                android:padding="25dp"
                 android:background="@drawable/btn_bundar"
                 android:drawableTop="@drawable/ic_calculating"
+                android:padding="25dp"
                 android:text="MODUL 1" />
 
             <Button
@@ -52,9 +75,9 @@
                 android:layout_height="300dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
-                android:padding="25dp"
                 android:background="@drawable/btn_bundar"
                 android:drawableTop="@drawable/ic_calculating"
+                android:padding="25dp"
                 android:text="MODUL 2" />
 
             <Button
@@ -63,9 +86,9 @@
                 android:layout_height="300dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
-                android:padding="25dp"
                 android:background="@drawable/btn_bundar"
                 android:drawableTop="@drawable/ic_calculating"
+                android:padding="25dp"
                 android:text="MODUL 3" />
         </LinearLayout>
     </HorizontalScrollView>
