@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     String[] text1 = {"Indonesi", "Jepang", "Russia", "Inggris", "Inggris", "Inggris"};
     String[] text2 = {"Jakarta", "Tokyo", "Moskow", "London", "Inggris", "Inggris"};
+    int img[] = {R.drawable.ic_calculating};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] from = {"negara", "ibukota"};
         int[] to = {R.id.negara, R.id.ibukota};
-        SimpleAdapter adapter = new SimpleAdapter(
-                this, arrayList,
-                R.layout.desain,
-                from,to
-        );
+        SimpleAdapter adapter = new SimpleAdapter(this, arrayList, R.layout.desain, from,to);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
