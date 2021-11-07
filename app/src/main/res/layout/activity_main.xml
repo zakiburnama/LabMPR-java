@@ -2,81 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainactivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/abuterang"
+    android:background="@color/abugelap"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Lab MPR 106"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+    </androidx.appcompat.widget.Toolbar>
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="200dp"
-                android:layout_height="300dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btn_bundar"
-                android:drawableTop="@drawable/ic_calculating"
-                android:padding="25dp"
-                android:text="MODUL 1" />
+    <FrameLayout
+        android:id="@+id/framelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stgbundar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="200dp"
-                android:layout_height="300dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btn_bundar"
-                android:drawableTop="@drawable/ic_calculating"
-                android:padding="25dp"
-                android:text="MODUL 2" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Kandang OTO"
+            android:textAlignment="center"
+            android:textColor="@color/abugelap"
+            android:textSize="30dp" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="200dp"
-                android:layout_height="300dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/btn_bundar"
-                android:drawableTop="@drawable/ic_calculating"
-                android:padding="25dp"
-                android:text="MODUL 3" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
+    </FrameLayout>
 
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/framelayout2"
         app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
@@ -87,7 +58,7 @@
             <ListView
                 android:id="@+id/list_view"
                 android:layout_width="match_parent"
-                android:layout_height="250dp" />
+                android:layout_height="550dp" />
 
         </LinearLayout>
     </ScrollView>

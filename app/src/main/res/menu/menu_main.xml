@@ -4,16 +4,10 @@
 
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/ic_baseline_arrow_back_24"
+        android:icon="@drawable/ic_baseline_search_24"
         android:title="Search"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
-
-    <item
-        android:id="@+id/action_help"
-        android:icon="@drawable/ic_calculating"
-        android:title="Help"
-        app:showAsAction="ifRoom|withText"/>
 
     <item
         android:id="@+id/action_setting"
@@ -23,6 +17,11 @@
     <item
         android:id="@+id/action_about"
         android:title="About"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="Exit"
         app:showAsAction="never"/>
 
 </menu>

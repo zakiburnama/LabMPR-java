@@ -16,13 +16,17 @@
         android:background="@color/abuterang"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!--
+
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+            android:onClick="pindah"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="6dp" />
 
+        <!--
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="wrap_content"
@@ -100,14 +104,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="snackbar"
-                android:text="SNACKBAR" />
+                android:text="Spesifikasi" />
 
             <Button
                 android:id="@+id/showlistbutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="showlist"
-                android:text="SHOWLIST" />
+                android:text="Warna Tersedia" />
 
             <Button
                 android:id="@+id/exitbutton"

@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,10 +54,6 @@ public class Modul2 extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_help:
-                Toast.makeText(this, "Help", Toast.LENGTH_SHORT).show();
-                return true;
-
             case R.id.action_setting:
                 Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
                 return true;
@@ -75,7 +72,7 @@ public class Modul2 extends AppCompatActivity {
     public void snackbar (View view) {
         Snackbar snackbar = Snackbar.make(
                 findViewById(R.id.constraintLayout),
-                "Ini adalah snackbar, iyeay",
+                "Belum tersedia",
                 Snackbar.LENGTH_SHORT
         );
         snackbar.show();
@@ -116,4 +113,10 @@ public class Modul2 extends AppCompatActivity {
                 }).create().show();
     }
     //END MODUL 4
+
+    //PINDAH
+    public void pindah (View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
 }
