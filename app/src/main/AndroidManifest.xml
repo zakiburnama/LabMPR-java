@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LabMPR_106">
         <activity
+            android:name=".usefirebase"
+            android:exported="true" />
+        <activity
             android:name=".projekuts"
             android:exported="true" />
         <activity
