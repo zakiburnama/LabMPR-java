@@ -52,29 +52,17 @@ public class MainActivity extends AppCompatActivity {
 
         // listView
         ListView listView = findViewById(R.id.list_view);
-        /*
-        ArrayList<HashMap<String, String>>arrayList = new ArrayList<>();
-
-        for (int i=0; i<text1.length; i++){
-            HashMap<String, String> hashMap = new HashMap<>();
-            hashMap.put("negara", text1[i]);
-            hashMap.put("ibukota", text2[i] + "");
-            arrayList.add(hashMap);
-        }
-
-        String[] from = {"negara", "ibukota"};
-        int[] to = {R.id.negara, R.id.ibukota};
-        SimpleAdapter adapter = new SimpleAdapter(this, arrayList, R.layout.desain, from, to);
-        listView.setAdapter(adapter);
-        */
-
         MyAdapter adapter = new MyAdapter(this, text1, text2, img);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                if (position == 0){
+                if (position == 0) {
                     Intent intent = new Intent(getApplicationContext(),Modul2.class);
+                    startActivity(intent);
+                }
+                else if (position == 1) {
+                    Intent intent = new Intent(getApplicationContext(),usefirebase.class);
                     startActivity(intent);
                 }
                 else{
